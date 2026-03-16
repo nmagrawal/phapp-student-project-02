@@ -13,9 +13,11 @@ from datetime import datetime
 
 class MyCategorizedCrawler:
     def __init__(self):
-        # TODO: Set up a requests session with appropriate headers
-        # Hint: Use requests.Session() and set User-Agent header
-        self.session = None  # Replace with your session setup
+        # Set up a requests session with appropriate headers
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (compatible; HealthResourceCrawler/1.0)'
+        })
         
         # Create output directory if it doesn't exist
         self.output_dir = "output"
@@ -46,9 +48,9 @@ class MyCategorizedCrawler:
         """
         try:
             print(f"Fetching: {url}")
-            # TODO: Implement page fetching logic
-            response = None  # Replace with actual request
-            soup = None      # Replace with actual parsing
+            response = self.session.get(url, timeout=10)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
             return soup
         except Exception as e:
             print(f"Error fetching {url}: {e}")
@@ -62,16 +64,11 @@ class MyCategorizedCrawler:
         the text or context you found.
         """
         found_tags = []
-        
         # Combine text and context for better matching
         full_text = (text + " " + context).lower()
-        
-        # TODO: Loop through health_keywords and check for matches
         for tag, keywords in self.health_keywords.items():
-            # TODO: Check if any keyword appears in full_text
-            # Hint: Use 'any(keyword in full_text for keyword in keywords)'
-            pass
-        
+            if any(keyword in full_text for keyword in keywords):
+                found_tags.append(tag)
         return found_tags
     
     def find_phone_numbers(self, text, context=""):
@@ -84,31 +81,21 @@ class MyCategorizedCrawler:
         - 555.123.4567
         """
         phone_numbers = []
-        
-        # TODO: Create regex patterns for phone numbers
+        # Regex patterns for phone numbers
         patterns = [
-            # Add your patterns here
-            # Example: r'\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b'
+            r'\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b',
+            r'\(\d{3}\)[-.\s]?\d{3}[-.\s]?\d{4}\b',
+            r'\b\d{3}[-.\s]\d{4}\b',
         ]
-        
-        # TODO: Use re.findall to find matches for each pattern
         for pattern in patterns:
-            # matches = re.findall(pattern, text)
-            # phone_numbers.extend(matches)
-            pass
-        
-        # Remove duplicates
+            matches = re.findall(pattern, text)
+            phone_numbers.extend(matches)
         unique_phones = list(set(phone_numbers))
-        
-        # Convert to categorized format
         results = []
         for phone in unique_phones:
             tags = self.auto_tag_resource(phone, context)
-            
-            # TODO: Add special handling for crisis/emergency numbers
             if 'crisis' in context.lower() or 'suicide' in context.lower():
                 tags.append('crisis_hotline')
-            
             results.append({
                 'category': 'CONTACT_INFO',
                 'type': 'phone_number',
@@ -116,7 +103,6 @@ class MyCategorizedCrawler:
                 'tags': tags,
                 'context': context
             })
-        
         return results
     
     def find_addresses(self, soup, context=""):
@@ -140,15 +126,11 @@ class MyCategorizedCrawler:
         ]
         
         for selector in address_selectors:
-            # TODO: Find elements matching the selector
             elements = soup.select(selector)
             for element in elements:
                 text = element.get_text(strip=True)
-                
-                # TODO: Check if text looks like an address
                 if self.looks_like_address(text):
                     tags = self.auto_tag_resource(text, context)
-                    
                     results.append({
                         'category': 'LOCATION',
                         'type': 'address',
@@ -156,7 +138,6 @@ class MyCategorizedCrawler:
                         'tags': tags,
                         'context': context
                     })
-        
         return results
     
     def find_facilities(self, soup, context=""):
@@ -180,19 +161,17 @@ class MyCategorizedCrawler:
             elements = soup.select(selector)
             for element in elements:
                 text = element.get_text(strip=True)
-                
-                # TODO: Check if text looks like a facility name
                 if self.looks_like_facility_name(text):
                     tags = self.auto_tag_resource(text, context)
-                    
-                    # TODO: Add facility-specific tags
                     facility_lower = text.lower()
                     if 'hospital' in facility_lower:
                         tags.append('hospital')
                     elif 'clinic' in facility_lower:
                         tags.append('clinic')
-                    # TODO: Add more facility types
-                    
+                    elif 'pharmacy' in facility_lower:
+                        tags.append('pharmacy')
+                    elif 'center' in facility_lower:
+                        tags.append('center')
                     results.append({
                         'category': 'FACILITY',
                         'type': 'facility_name',
@@ -200,7 +179,6 @@ class MyCategorizedCrawler:
                         'tags': tags,
                         'context': context
                     })
-        
         return results
     
     def looks_like_address(self, text):
@@ -300,7 +278,7 @@ class MyCategorizedCrawler:
             'crawl_info': {
                 'url': results.get('url'),
                 'timestamp': results.get('timestamp'),
-                'student_name': 'YOUR_NAME_HERE'  # TODO: Put your name!
+                'student_name': 'Nik'  # TODO: Put your name!
             }
         }
         

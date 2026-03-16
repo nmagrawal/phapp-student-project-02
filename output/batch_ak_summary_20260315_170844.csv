@@ -1,0 +1,4 @@
+County,Department,URL,Phones Found,Addresses Found,Facilities Found,Total Resources,Status
+Anchorage Muny,Anchorage Muny,http://www.muni.org/departments/health,14,0,1,15,SUCCESS
+Lake and Peninsula Borough,Lake and Peninsula Borough,https://www.chickaloon-nsn.gov/health-social-services/,9,0,1,10,SUCCESS
+North Slope Borough,North Slope Borough,http://www.north-slope.org/departments/health-social-services,6,0,3,9,SUCCESS

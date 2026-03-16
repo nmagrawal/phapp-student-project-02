@@ -1,0 +1,450 @@
+{
+  "crawl_info": {
+    "state": "AK",
+    "timestamp": "2026-03-15T17:10:10.769533",
+    "total_sites": 4,
+    "successful_crawls": 4,
+    "student_name": "Nik"
+  },
+  "results": [
+    {
+      "url": "http://www.muni.org/departments/health",
+      "timestamp": "2026-03-15T17:09:59.363006",
+      "resources": [
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-7770",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-7770",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-4758",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-4200",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-4200",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-4668",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-8118",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-4799",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-4799",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-8118",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-4668",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-4758",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 343-6718",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "343-6718",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "AHD Medical Officers",
+          "tags": [
+            "emergency"
+          ],
+          "context": "page headings"
+        }
+      ],
+      "county": "Anchorage Muny",
+      "department_name": "Anchorage Muny",
+      "population": "288000"
+    },
+    {
+      "url": "https://www.chickaloon-nsn.gov/health-social-services/",
+      "timestamp": "2026-03-15T17:10:03.265066",
+      "resources": [
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "745-0709",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 745-0704",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "631-7665",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "745-0704",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 631-7665",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 745-0709",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "745-0708",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 745-0704",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 745-0708",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "Health & Social Services Department",
+          "tags": [
+            "emergency"
+          ],
+          "context": "page headings"
+        }
+      ],
+      "county": "Lake and Peninsula Borough",
+      "department_name": "Lake and Peninsula Borough",
+      "population": "1592"
+    },
+    {
+      "url": "http://www.north-slope.org/departments/health-social-services",
+      "timestamp": "2026-03-15T17:10:06.352611",
+      "resources": [
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 852-0357",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "852-0357",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "907-852-2611",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "(907) 852-0344",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "852-2611",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "852-0344",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "Health & Social Services",
+          "tags": [
+            "emergency"
+          ],
+          "context": "page headings"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "Health & Social Services",
+          "tags": [
+            "emergency"
+          ],
+          "context": "page headings"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "Health & Social Services",
+          "tags": [
+            "emergency"
+          ],
+          "context": "page headings"
+        }
+      ],
+      "county": "North Slope Borough",
+      "department_name": "North Slope Borough",
+      "population": "9832"
+    },
+    {
+      "url": "https://www.ykhc.org/",
+      "timestamp": "2026-03-15T17:10:10.769414",
+      "resources": [
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "543-6625",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "478-3321",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "427-3500",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "907-427-3500",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "800-478-3321",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "543-6315",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "543-6336",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "833-543-6625",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "907-543-6315",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "CONTACT_INFO",
+          "type": "phone_number",
+          "value": "907-543-6336",
+          "tags": [
+            "emergency"
+          ],
+          "context": "general page content"
+        },
+        {
+          "category": "FACILITY",
+          "type": "facility_name",
+          "value": "2025 Health Aide of the Year awarded to Napakiak Health Aide Brittany Sallison",
+          "tags": [],
+          "context": "page headings"
+        }
+      ],
+      "county": "Yukon-Koyukuk Census Area",
+      "department_name": "Yukon-Koyukuk Census Area",
+      "population": "5230"
+    }
+  ]
+}

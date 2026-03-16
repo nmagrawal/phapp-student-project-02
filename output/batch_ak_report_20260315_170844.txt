@@ -1,0 +1,21 @@
+BATCH CRAWLING REPORT - AK
+==================================================
+
+Crawled: 2026-03-15 17:08:44
+Total Sites: 3
+Successful: 3
+Failed: 0
+
+SUMMARY STATISTICS
+--------------------
+Total Resources Found: 34
+CONTACT_INFO: 29
+FACILITY: 5
+
+TOP COUNTIES BY RESOURCES FOUND
+-----------------------------------
+Anchorage Muny: 15 resources
+Lake and Peninsula Borough: 10 resources
+North Slope Borough: 9 resources
+
+Detailed results available in JSON format.

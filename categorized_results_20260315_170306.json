@@ -1,0 +1,55 @@
+{
+  "url": "https://www.cdc.gov/flu/treatment/index.html",
+  "timestamp": "2026-03-15T17:03:06.235775",
+  "resources": [
+    {
+      "category": "CONTACT_INFO",
+      "type": "phone_number",
+      "value": "800-232-4636",
+      "tags": [],
+      "context": "general content",
+      "confidence": 0.8
+    },
+    {
+      "category": "CONTACT_INFO",
+      "type": "phone_number",
+      "value": "800-232-4636",
+      "tags": [],
+      "context": "general content",
+      "confidence": 0.8
+    },
+    {
+      "category": "FACILITY",
+      "type": "facility_name",
+      "value": "1. Take flu antiviral drugs, if a health care provider prescribes them.",
+      "tags": [
+        "flu",
+        "emergency_room"
+      ],
+      "context": "heading",
+      "confidence": 0.6
+    },
+    {
+      "category": "FACILITY",
+      "type": "facility_name",
+      "value": "Health Care Providers",
+      "tags": [
+        "flu",
+        "emergency_room"
+      ],
+      "context": "heading",
+      "confidence": 0.6
+    },
+    {
+      "category": "FACILITY",
+      "type": "facility_name",
+      "value": "Public Health",
+      "tags": [
+        "flu",
+        "emergency_room"
+      ],
+      "context": "heading",
+      "confidence": 0.6
+    }
+  ]
+}

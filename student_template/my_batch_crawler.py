@@ -32,19 +32,21 @@ class MyBatchCrawler:
         
         # TODO: Open and read the CSV file
         # Hint: Use csv.DictReader
-        filename = f"../data/state_websites/us-{state_code.lower()}.csv"
+        filename = f"data/websites/us-{state_code.lower()}.csv"
         
         try:
             # TODO: Read each row and add to websites list
             with open(filename, 'r', newline='', encoding='utf-8') as file:
-                reader = csv.DictReader(file)
+                reader = csv.DictReader(file, delimiter=';')
                 for row in reader:
-                    websites.append({
-                        'county': row['county'],
-                        'department_name': row['department_name'],
-                        'website_url': row['website_url'],
-                        'population': row.get('population', 'Unknown')
-                    })
+                    # Only add if URL exists
+                    if row.get('pha_url'):
+                        websites.append({
+                            'county': row.get('name', 'Unknown'),
+                            'department_name': row.get('name', 'Unknown'),
+                            'website_url': row.get('pha_url', ''),
+                            'population': row.get('population_proper', 'Unknown')
+                        })
             
             print(f"Loaded {len(websites)} health departments for {state_code.upper()}")
             
@@ -74,19 +76,16 @@ class MyBatchCrawler:
             print(f"URL: {site['website_url']}")
             
             try:
-                # TODO: Crawl the site using your crawler
+                # Crawl the site using your crawler
                 site_results = self.crawler.crawl_page(site['website_url'])
-                
-                # TODO: Add metadata from the CSV
+                # Add metadata from the CSV
                 site_results.update({
                     'county': site['county'],
                     'department_name': site['department_name'],
                     'population': site['population']
                 })
-                
-                # TODO: Add the results to your list
+                # Add the results to your list
                 results.append(site_results)
-                
                 # Show quick summary
                 num_resources = len(site_results.get('resources', []))
                 print(f"✅ Found {num_resources} resources")
@@ -102,7 +101,7 @@ class MyBatchCrawler:
                     'resources': []
                 })
             
-            # TODO: Wait between requests (time.sleep)
+            # Wait between requests (time.sleep)
             # Be polite - don't hammer the servers!
             if i < min(len(websites), max_sites) - 1:
                 print("Waiting 2 seconds...")
@@ -126,7 +125,7 @@ class MyBatchCrawler:
                 "timestamp": datetime.now().isoformat(),
                 "total_sites": len(results),
                 "successful_crawls": len([r for r in results if 'error' not in r]),
-                "student_name": "YOUR_NAME_HERE"  # TODO: Put your name!
+                "student_name": "Nik"
             },
             "results": results
         }
@@ -285,7 +284,7 @@ if __name__ == "__main__":
     batch_crawler = MyBatchCrawler()
     
     # TODO: Choose a state to test with
-    state = "ca"  # or "or", "tx", etc.
+    state = "ak"  # or "or", "tx", etc.
     
     # TODO: Load the websites
     print(f"\nLoading websites for {state.upper()}...")
@@ -295,8 +294,8 @@ if __name__ == "__main__":
         print(f"Found {len(websites)} health departments")
         
         # TODO: Crawl a few sites (start small!)
-        print(f"\nCrawling first 3 sites...")
-        results = batch_crawler.crawl_multiple_sites(websites, max_sites=3)
+        print(f"\nCrawling first 50 sites...")
+        results = batch_crawler.crawl_multiple_sites(websites, max_sites=50)
         
         # TODO: Show summary
         batch_crawler.print_batch_summary(results)
